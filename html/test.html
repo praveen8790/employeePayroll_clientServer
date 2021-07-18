@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" con!_ent="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../node_modules/mtr-datepicker/dist/mtr-datepicker.min.css">
+        <link rel="stylesheet" href="../node_modules/mtr-datepicker/dist/mtr-datepicker.default-theme.min.css">
+        <script src="../node_modules/mtr-datepicker/dist/mtr-datepicker.min.js"></script>
+    </head>
+    <body>
+        <div id="demo"></div>
+        <div id="dd"></div>
+        <button onclick="submitted()">submit</button>
+        <script>
+            // let datepickerDefault = new MtrDatepicker({target: "demo",timepicker:0,future:false});
+            // datepickerDefault.format('Y.M.D');
+
+            function submitted(){
+                // var date = datepickerDefault.toString();
+                // date = date.split(" ");
+                // var newdate = date[2] + ' ' + date[1] + ' ' +  date[3];
+                // alert(newdate);
+                let time = '2019/08/02';
+                alert(time);
+                // var initDate = new Date(time);
+                var config = {
+                    target: 'dd',
+                    timestamp: new Date(time).getTime(),
+                    timepicker:false
+                };
+                var myDatepicker = new MtrDatepicker(config,);
+
+                // const d = new Date();
+                // let x = d.toString();
+                // document.getElementById("demo").innerHTML = x;
+
+            }
+        </script>
+    </body>
+</html>
